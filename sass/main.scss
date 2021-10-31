@@ -1,0 +1,118 @@
+@import 'variables';
+@import 'btnall';
+.main{
+    padding: 20px;
+    margin: auto;
+}
+.banner{grid-area: banner;}
+.first-title{grid-area: f-title;}
+.second-title{grid-area: s-title;}
+.third-title{grid-area: t-title;}
+.four-title{grid-area: fo-title;}
+.grid-container{
+	display: grid;
+    grid-template-columns: auto auto auto;
+	grid-template-areas: 
+    'banner banner f-title'
+    's-title t-title fo-title'
+    ;
+	grid-gap:10px 20px;
+    text-align: center;
+}
+.grid-container{
+    div{
+        height: 210px;
+    }
+}
+.grid-container{
+    .banner{
+        background-color: $banner-bg;
+        color: $blue;
+    }
+    .first-title{
+        background-color: $title-first-bg;
+        color: $title-first-text;
+    }
+    .second-title{
+        background-color:$title-two-bg;
+        color: $title-two-three-four-text;
+    }
+    .third-title{
+        background-color:$title-three-bg;
+        color: $title-two-three-four-text;
+    }
+    .four-title{
+        background-color:$title-four-bg;
+        color: $title-two-three-four-text;
+    }
+}
+
+.btn{
+    @extend %button-design;
+}
+.btn-second{
+    background-color: $blue;
+}
+.btn-third{
+    background-color: $brown;
+    width: 240px;
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+ 
+@media screen and (max-width: 1024px) and (min-width: 767px) {
+  .grid-container {
+    grid-template-columns: auto auto;
+	grid-template-areas: 
+    'banner banner'
+    's-title f-title' 
+     't-title fo-title'
+    ;
+	grid-gap:10px 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+  .btn{
+      padding: 35px 110px;
+      font-size: 30px;
+      border-radius: 50px;
+  }
+  .btn-third{
+      width: 700px;
+  }
+
+}
+@media screen and (max-width: 768px) and (min-width: 0px) {
+  .grid-container {
+    display: grid;
+	grid-template-areas:
+			'banner'
+			'f-title'
+			's-title'
+			't-title'
+			'fo-title';
+			grid-gap: 10px 10px;
+			padding: 20px;
+            
+            .banner{
+               height: 250px;
+               
+            }
+            .mobile-width{
+                height: 100px;
+                width: 220px;
+                margin: auto;
+            }
+  }
+  .main{
+      .button{
+          .btn{
+              width: 100%;
+          }
+      }
+  }
+}

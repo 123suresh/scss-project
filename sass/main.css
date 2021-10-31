@@ -1,0 +1,146 @@
+/* create _variables.scss class*/
+/* create _btnall.scss class*/
+.btn {
+  background-color: black;
+  margin-top: 10px;
+  padding: 10px 40px;
+  color: #FFFFFF;
+  border-radius: 15px;
+  border: none;
+}
+
+.main {
+  padding: 20px;
+  margin: auto;
+}
+
+.banner {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: banner;
+}
+
+.first-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: f-title;
+}
+
+.second-title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: s-title;
+}
+
+.third-title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: t-title;
+}
+
+.four-title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: fo-title;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+      grid-template-areas: 'banner banner f-title' 's-title t-title fo-title';
+  grid-gap: 10px 20px;
+  text-align: center;
+}
+
+.grid-container div {
+  height: 210px;
+}
+
+.grid-container .banner {
+  background-color: #87CEFA;
+  color: #4169E1;
+}
+
+.grid-container .first-title {
+  background-color: #DA70D6;
+  color: #800000;
+}
+
+.grid-container .second-title {
+  background-color: #FFB6C1;
+  color: #2E8B57;
+}
+
+.grid-container .third-title {
+  background-color: #98FB98;
+  color: #2E8B57;
+}
+
+.grid-container .four-title {
+  background-color: #87CEFA;
+  color: #2E8B57;
+}
+
+.btn-second {
+  background-color: #4169E1;
+}
+
+.btn-third {
+  background-color: #A9A9A9;
+  width: 240px;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 767px) {
+  .grid-container {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+        grid-template-areas: 'banner banner' 's-title f-title'  't-title fo-title';
+    grid-gap: 10px 20px;
+    text-align: center;
+    font-size: 30px;
+  }
+  .btn {
+    padding: 35px 110px;
+    font-size: 30px;
+    border-radius: 50px;
+  }
+  .btn-third {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 0px) {
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: 'banner' 'f-title' 's-title' 't-title' 'fo-title';
+    grid-gap: 10px 10px;
+    padding: 20px;
+  }
+  .grid-container .banner {
+    height: 250px;
+  }
+  .grid-container .mobile-width {
+    height: 100px;
+    width: 220px;
+    margin: auto;
+  }
+  .main .button .btn {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
